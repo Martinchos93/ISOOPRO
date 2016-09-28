@@ -8,8 +8,8 @@
 <body>
 <?php
 
-	echo 'hola mundo';
-?>
+	echo 2+2;
+?> 
 
 </body>
 </html>
