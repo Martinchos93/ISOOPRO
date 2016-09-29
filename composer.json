@@ -7,14 +7,11 @@
             "email": "martinsanchez9314@gmail.com"
         }
     ],
-<<<<<<< HEAD
     "autoload": {
         "psr-4": {
-            "app\\entity\\": "ISOOPRO/ENTITYS"
+            "app\\entity\\": "ISOOPRO/ENTITIES"
         }
     },
-=======
->>>>>>> 4b83e4dcfe3c35ea4e23fbcf4747faf8311d0dc6
     "require": {
     	"doctrine/orm": "^2.5",
         "php-di/php-di": "^5.4",
