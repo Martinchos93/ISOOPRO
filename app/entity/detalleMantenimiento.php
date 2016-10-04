@@ -4,7 +4,7 @@
 	 * @Entity
 	 * @Table(name="DetalleMantenimiento")
 	 */
-	class detalleMantenimiento	{
+	class DetalleMantenimiento {
 		/**
 	     * @Id @Column(type="integer")
 	     * @GeneratedValue
@@ -14,9 +14,14 @@
 		private $idMantenimiento;
 		/** @Column(type="integer") */
 		private $idComponente;
-		/** @Column(type="integer") */
-		private $cantidad;
-	
+		/** @Column(type="integer") */	
+
+
+		/** 
+			@ManyToOne(targetEntity="Mantenimiento", inversedBy="detallesMantenimiento")
+     		@JoinColumn(name="IdMantenimiento", referencedColumnName="Id")
+		*/
+		private $detalleMantenimiento;
 	}
 
  ?>

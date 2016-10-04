@@ -1,11 +1,14 @@
 <?php 
-		
-		
 	/**
 	 * @Entity
 	 * @Table(name="Bienes")
 	 */
-	class ClassName	{
+	class Bien 
+	{
+ 
+		public function __construct() {
+			$this->$componentes = new ArrayCollection();
+		}	
 		/**
 	     * @Id @Column(type="integer")
 	     * @GeneratedValue
@@ -17,7 +20,7 @@
 		/** @Column(length=500) */
 		private $descripcion;
 		/** @Column(type="integer") */
-		private $mubroId;
+		private $rubroId;
 		/** @Column(length=20) */
 		private $modelo;
 		/** @Column(type="decimal") */
@@ -28,10 +31,14 @@
      	*/
 		private $mantenimientos;
 		/**
-     	* @OneToMany(targetEntity="componente")
-     	* @JoinColumn(name="Id", referencedColumnName="IdComponente")
-     	*/
+	     * @OneToMany(targetEntity="Componente", mappedBy="bien")
+	     */
 		private $componentes;
+		/**
+	     * @ManyToOne(targetEntity="Rubro", inversedBy="Bienes")
+	     * @JoinColumn(name="IdRubro", referencedColumnName="id")
+	     */
+		private $rubro
 	}
-
+ 
  ?>

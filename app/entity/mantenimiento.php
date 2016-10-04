@@ -1,11 +1,16 @@
 <?php 
 	
 	/**
+
 	 * @Entity
 	 * @Table(name="Mantenimiento")
 	 */
-	class mantenimiento	
+	class Mantenimiento	
 	{
+
+		public function __construct() {
+			$this->$detalleMantenimiento =  new ArrayColection();
+		}	
 		/**
 	     * @Id @Column(type="integer")
 	     * @GeneratedValue
@@ -23,8 +28,16 @@
 		private $idUsuario;
 		/** @Column(type="decimal") */
 		private $importe;
+		/**
+    		@ManyToOne(targetEntity="Usuario", inversedBy="mantenimientos")
+     		@JoinColumn(name="IdUsuario", referencedColumnName="Id")
+    	 */
+		private $usuario
+		/**
+	     * @OneToMany(targetEntity="DetalleMantenimiento", mappedBy="usuario")
+	     */
+		private $detallesMantenimiento;
 
-		private $detalleMantenimiento;
 	}
 
  ?>
