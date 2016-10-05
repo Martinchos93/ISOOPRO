@@ -7,7 +7,6 @@
 	 */
 	class Rubro 
 	{
-
 		public function __construct(){
 			$this->$bienes = new ArrayCollection();
 		}

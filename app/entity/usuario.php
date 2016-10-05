@@ -14,18 +14,18 @@
 	     * @Id @Column(type="integer")
 	     * @GeneratedValue
 	     */
-		private $id;
+		public $id;
 		/** @Column(length=20) */
-		private $username;
+		public $username;
 		/** @Column(length=20) */
-		private $password;
+		public $password;
 		/** @Column(type="integer") */
-		private $nivel;
+		public $nivel;
 
 		/**
 	     * @OneToMany(targetEntity="Mantenimientos", mappedBy="usuario")
 	     */
-		private $mantenimientos
+		public $mantenimientos;
 
 	}
 

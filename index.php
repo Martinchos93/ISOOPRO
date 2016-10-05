@@ -7,8 +7,10 @@
 </head>
 <body>
 <?php
+	require_once('app/services/usuariosService.php');
 
-	echo 2+2;
+	$userService = new UsuariosService();
+	$userService->TestInsertUser();
 ?> 
 
 </body>

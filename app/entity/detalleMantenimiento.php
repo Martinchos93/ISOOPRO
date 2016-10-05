@@ -4,7 +4,8 @@
 	 * @Entity
 	 * @Table(name="DetalleMantenimiento")
 	 */
-	class DetalleMantenimiento {
+	class DetalleMantenimiento 
+	{
 		/**
 	     * @Id @Column(type="integer")
 	     * @GeneratedValue
