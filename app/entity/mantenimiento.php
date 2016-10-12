@@ -1,5 +1,10 @@
 <?php 
-	namespace App\Entities;	
+namespace App\Entities;	
+
+use Doctrine\ORM\Mapping\Entity;
+use Doctrine\ORM\Mapping\Table;
+use Doctrine\ORM\Mapping\GeneratedValue;
+use Doctrine\ORM\Mapping\Column;
 	/**
 
 	 * @Entity
@@ -38,6 +43,66 @@
 	     */
 		private $detallesMantenimiento;
 
+		public function getDescripcion()
+    	{
+        	return $this->descripcion;
+    	}
+
+		public function getFecha()
+    	{
+        	return $this->fecha;
+    	}
+
+		public function getTipo()
+    	{
+        	return $this->tipo;
+    	}
+
+		public function getImporte()
+    	{
+        	return $this->importe;
+    	}
+
+		public function getUsuario()
+    	{
+        	return $this->usuario;
+    	}
+
+		public function getDetallesMantenimiento()
+    	{
+        	return $this->detallesMantenimiento;
+    	}
+
+
+		public function setDescripcion($descripcion)
+    	{
+        	$this->descripcion = $descripcion;
+    	}	
+
+    	public function setFecha($fecha)
+    	{
+        	$this->fecha = $fecha;
+    	}	    	
+
+    	public function setTipo($tipo)
+    	{
+        	$this->tipo = $tipo;
+    	}	    	
+
+    	public function setImporte($importe)
+    	{
+        	$this->importe = $importe;
+    	}	    	
+
+		public function setUsuario($usuario)
+    	{
+        	$this->usuario = $usuario;
+    	}	
+
+    	public function setDetallesMantenimientos($detallesMantenimiento)
+    	{
+        	$this->detallesMantenimiento = $detallesMantenimiento;
+    	}	
 	}
 
  ?>

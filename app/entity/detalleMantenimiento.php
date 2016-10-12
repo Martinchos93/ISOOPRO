@@ -1,5 +1,10 @@
 <?php 
-	namespace App\Entities;
+namespace App\Entities;
+
+use Doctrine\ORM\Mapping\Entity;
+use Doctrine\ORM\Mapping\Table;
+use Doctrine\ORM\Mapping\GeneratedValue;
+use Doctrine\ORM\Mapping\Column;
 	/**
 	 * @Entity
 	 * @Table(name="DetalleMantenimiento")
@@ -23,6 +28,16 @@
      		@JoinColumn(name="IdMantenimiento", referencedColumnName="Id")
 		*/
 		private $detalleMantenimiento;
+
+		public function getDetalleMantenimiento()
+    	{
+        	return $this->detalleMantenimiento;
+    	}
+
+		public function setDetalleMantemiento($detalleMantenimiento)
+    	{
+        	$this->detalleMantenimiento = $detalleMantenimiento;
+    	}	
 	}
 
  ?>
