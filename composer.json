@@ -10,7 +10,7 @@
 
     "autoload": {
         "psr-4": {
-            "app\\entity\\": "ISOOPRO/ENTITIES"
+            "App\\Entities\\": "app/entity"
         }
     },
 
