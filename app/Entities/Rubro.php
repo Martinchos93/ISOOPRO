@@ -1,6 +1,11 @@
 <?php 
 
-	namespace App\Entities;
+namespace App\Entities;
+
+use Doctrine\ORM\Mapping\Entity;
+use Doctrine\ORM\Mapping\Table;
+use Doctrine\ORM\Mapping\GeneratedValue;
+use Doctrine\ORM\Mapping\Column;
 	/**
 	 * @Entity
 	 * @Table(name="Rubros")
@@ -23,6 +28,30 @@
 
 		/** @OneToMany(targetEntity="Bien", mappedBy="rubro")
 		private $bienes;
+
+		*/
+
+		public function getNombre()
+    	{
+        	return $this->nombre;
+    	}
+
+		public function getDescripcion()
+    	{
+        	return $this->descripcion;
+    	}
+
+
+		public function setNombre($nombre)
+    	{
+        	$this->nombre = $nombre;
+    	}	
+
+		public function setDescripcion($descripcion)
+    	{
+        	$this->descripcion = $descripcion;
+    	}	
+
 
 	}
 

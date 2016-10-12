@@ -1,6 +1,11 @@
 <?php 
-	namespace App\Entities;
-	/**
+namespace App\Entities;
+	
+use Doctrine\ORM\Mapping\Entity;
+use Doctrine\ORM\Mapping\Table;
+use Doctrine\ORM\Mapping\GeneratedValue;
+use Doctrine\ORM\Mapping\Column;
+/**
 	 * @Entity
 	 * @Table(name="Usuarios")
 	 */
@@ -27,6 +32,36 @@
 	     * @OneToMany(targetEntity="Mantenimientos", mappedBy="usuario")
 	     */
 		public $mantenimientos;
+
+    	public function getUserName()
+    	{
+        	return $this->userName;
+    	}
+
+    	public function getPassword()
+    	{
+        	return $this->Password;
+    	}
+
+		public function getNivel()
+    	{
+        	return $this->nivel;
+    	}
+
+    	public function setUserName($userName)
+    	{
+        	$this->username = $userName;
+    	}
+
+    	public function setPassword($password)
+    	{
+        	$this->password = md5($password);
+    	}
+
+		public function setNivel($nivel)
+    	{
+        	$this->nivel = $nivel;
+    	}	
 
 	}
 
