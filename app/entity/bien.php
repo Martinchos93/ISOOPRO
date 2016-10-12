@@ -12,8 +12,8 @@ use Doctrine\ORM\Mapping\Column;
 	 */
 	class Bien 
 	{
- 
-		public function __construct() {
+		public function __construct() 
+		{
 			$this->$componentes = new ArrayCollection();
 		}	
 		/**
@@ -48,64 +48,64 @@ use Doctrine\ORM\Mapping\Column;
 		private $rubro
 
 		public function getNombre()
-    	{
-        	return $this->nombre;
-    	}
- 
-    	public function getDescripcion()
-    	{
-        	return $this->descripcion;
-    	}
+		{
+			return $this->nombre;
+		}
 
- 		public function getModelo()
-    	{
-        	return $this->modelo;
-    	}
+		public function getDescripcion()
+		{
+			return $this->descripcion;
+		}
+
+		public function getModelo()
+		{
+			return $this->modelo;
+		}
 
 		public function getValor()
-    	{
-        	return $this->valor;
-    	}
-		
+		{
+			return $this->valor;
+		}
+
 		public function getMantenimientos()
-    	{
-        	return $this->mantenimientos;
-    	}
+		{
+			return $this->mantenimientos;
+		}
 
 		public function getComponentes()
-    	{
-        	return $this->componentes;
-    	}
+		{
+			return $this->componentes;
+		}
 
-    	public function setNombre($nombre)
-    	{
-        	$this->nombre = $nombre;
-    	}	
+		public function setNombre($nombre)
+		{
+			$this->nombre = $nombre;
+		}	
 
 		public function setDescripcion($descripcion)
-    	{
-        	$this->descripcion = $descripcion;
-    	}	
+		{
+			$this->descripcion = $descripcion;
+		}	
 
 		public function setModelo($modelo)
-    	{
-	        $this->modelo = $modelo;
-    	}	
-		
-		public function setValor($valor)
-    	{
-	        $this->valor = $valor;
-    	}	
+		{
+			$this->modelo = $modelo;
+		}	
 
-    	public function setMantenimientos($mantenimientos)
-    	{
-	        $this->mantenimientos = $mantenimientos;
-    	}	
-		
+		public function setValor($valor)
+		{
+			$this->valor = $valor;
+		}	
+
+		public function setMantenimientos($mantenimientos)
+		{
+			$this->mantenimientos = $mantenimientos;
+		}	
+
 		public function setComponentes($componentes)
-    	{
-        	$this->componentes = $componentes;
-    	}	
+		{
+			$this->componentes = $componentes;
+		}	
 
 
 	}
