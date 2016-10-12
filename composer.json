@@ -1,6 +1,6 @@
 {
     "name": "root/isoopro",
-    "description": "es academico",
+    "description": "Proyecto ISOO",
     "authors": [
         {
             "name": "martinchos93",
@@ -10,7 +10,7 @@
 
     "autoload": {
         "psr-4": {
-            "App\\Entities\\": "app/entity"
+            "App\\": "app/"
         }
     },
 

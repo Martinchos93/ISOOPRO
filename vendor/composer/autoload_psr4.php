@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'app\\entity\\' => array($baseDir . '/ISOOPRO/ENTITIES'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
@@ -51,5 +50,5 @@ return array(
     'Doctrine\\Common\\' => array($vendorDir . '/doctrine/common/lib/Doctrine/Common'),
     'DI\\' => array($vendorDir . '/php-di/php-di/src/DI'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
-    'App\\' => array($vendorDir . '/laravel/lumen/app'),
+    'App\\' => array($baseDir . '/app', $vendorDir . '/laravel/lumen/app'),
 );
