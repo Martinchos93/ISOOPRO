@@ -1,4 +1,6 @@
 <?php 
+
+namespace App\Entities;
 	/**
 	 * @Entity
 	 * @Table(name="Bienes")
